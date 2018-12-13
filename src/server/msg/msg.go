@@ -7,5 +7,7 @@ import (
 var Processor = protobuf.NewProcessor()
 
 func init() {
-	Processor.Register(&SearchRequest{})
+	Processor.SetByteOrder(true)
+	Processor.Register(&Login{})
+	Processor.Register(&LoginSuccessfull{})
 }
